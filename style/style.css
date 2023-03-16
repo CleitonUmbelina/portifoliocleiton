@@ -1,0 +1,133 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --cor-primaria:#000000;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #22D4FD;
+}
+
+
+body{
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+
+}
+.cabecalho{
+    padding: 1% 15%;
+}
+.cabecalho__nav{
+    display: flex;
+    gap: 20px;
+}
+/*Mudado fonte size para rem para ficar
+adaptavel para quando usuarios fizer 
+alteração no navegador isso pega o px dividido 
+por 16 da o valor em rem*/
+.cabecalho__link{
+   font-family: 'Montserrat 'sans-serif;
+   font-size: 1.5rem; /*24px*/
+   font-weight: 600;
+   color: var(--cor-terciaria);
+   text-decoration: none;
+}
+.apresent{
+    padding:  5% 15%;
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+    gap:82px;
+}
+.apresent__conteudo{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.apresent__conteudo__tit{
+    font-size: 2.25rem;/*36px*/
+    font-family: 'Krona One', sans-serif;
+}
+.destaque-titulo{
+    color: var(--cor-terciaria);
+}
+.apresent__conteudo__tex{
+    font-size: 1.5rem;/*24px*/
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.apresent__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    justify-content: space-between;
+}
+.apresent__link__subt{
+    font-family: 'Krona One' sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+.apresent__link__link{
+    /* background-color: #22D4FD; */
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    color: var(--cor-secundaria);
+    border: 2px solid var(--cor-terciaria);
+    width: 378px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;/*24px*/
+    padding: 16.5px 0;
+    text-decoration: none;
+    /* color: #000000; */
+    font-family: 'Montserrat', sans-serif;
+
+}
+.apresent__link__link:hover{
+    background-color: #272727;
+}
+
+.image__foto{
+    width: 30%;
+}
+
+.rodape{
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    text-align: center;
+    padding: 24px;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 1.5rem;/*24px*/
+    font-weight: 400;
+
+}
+/*criando uma ccondição para alterar o formato
+da apresentação uma condiçao quando a tela 
+diminuir dai ele coloca esse formato*/
+@media (max-width: 1200px){
+
+    .cabecalho{
+       padding: 10%;
+    }
+
+    .apresent{
+        flex-direction: column-reverse;
+    }
+    .cabecalho__nav{
+       justify-content: center;
+       padding: 5%;
+    }
+    .apresent__conteudo{
+        width: auto;
+    }
+}
